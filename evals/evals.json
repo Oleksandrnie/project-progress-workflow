@@ -1,0 +1,29 @@
+{
+  "skill_name": "project-progress-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Use $project-progress-workflow for this three-stage refactor. Keep one local checkpoint commit per completed non-empty stage, never push, preserve the unrelated modified branding.css file, and leave a precise continuation state if interrupted.",
+      "expected_output": "The workflow treats the explicit invocation as authorization for local stage commits, creates one ignored local progress file, stages only stage-owned files, records validation and commit hashes, never pushes, and preserves branding.css.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Implement the new billing export across the API, database, and UI. Break it into reviewable stages and validate each stage. I have not said whether you may create commits.",
+      "expected_output": "If the workflow is selected implicitly, it establishes scope and stages but asks once before the first checkpoint commit because no commit strategy was provided; it does not repeatedly ask after authorization.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Read the current retry implementation and explain why duplicate jobs sometimes occur. Do not modify files, create temporary planning state, stage changes, or commit anything.",
+      "expected_output": "The project-progress-workflow skill should not trigger because the task is a read-only diagnosis; no progress file, Git mutation, or checkpoint is created.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Continue the interrupted migration using the existing local progress file. The worktree contains unrelated user changes and the current stage has a newly failing integration test. Preserve a rollback point, reconcile the recorded state with Git, and stop with an exact next action if the failure cannot be resolved.",
+      "expected_output": "The workflow reuses and reconciles the existing progress file, preserves unrelated changes, records the new failure truthfully, creates only an authorized focused checkpoint for stage-owned changes, keeps the stage incomplete, and leaves actionable continuation state.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill: Project Progress Workflow"
+  short_description: "Track staged repository work and checkpoints"
+  default_prompt: "Use $project-progress-workflow to plan, track, validate, and complete this repository task in staged commits."
